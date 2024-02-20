@@ -1,23 +1,26 @@
+import { Route, Routes } from 'react-router-dom';
 import logo from './logo.svg';
-import './App.css';
+import { MainComponent } from './Maincomponent/MainComponent';
+import WeatherComponent from './Weather/Weather.component';
+import Location from './WeatherLocation/WeatherLocation';
+import { ChildComponent } from './Childcomponent/ChildComponent';
+// import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <WeatherComponent/>
+      <MainComponent/>
+      {/* <div className='mt-4'> 
+      <Location/>
+      </div> */} 
+      <Routes>
+        <Route path="/" element={<WeatherComponent/>}></Route>
+        <Route path="parent" element={<MainComponent/>}> </Route>
+        <Route path="child" element={<ChildComponent/>}></Route>
+      </Routes>
+  
+  
     </div>
   );
 }
