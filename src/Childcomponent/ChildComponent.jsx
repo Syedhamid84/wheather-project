@@ -1,17 +1,19 @@
 import React from 'react';
 
-// import ParentToChild from "../Maincomponent/MainComponent";
-
-export const ChildComponent = ( props ) => {
+export const ChildComponent = (props) => {
   return (
-    <div>ChildComponent
-        {/* <div>
-            Recieving data from main component
-        </div> */}
-        <div>
+    <div>
 
-       <h1> {props.name} </h1>
-        </div>
+      <div>
+
+        <p>{props.name}</p>
+        <p>{props.fullname} </p>
+        <p>{props.age} </p>
+        <h1>this is child component</h1>
+
+
+
+      </div>
     </div>
   )
 }

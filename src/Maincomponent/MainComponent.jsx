@@ -9,37 +9,34 @@ export const MainComponent = () => {
     const [Data, setData] = useState();
     const newdata = "The data is passing from main component to the child component";
 
-    useEffect(()=>{
-        console.log("showing data", Data);
 
+    const ParentToChild = () => {
 
-
-    },[Data]);
-
-    const ParentToChild =() =>{
-
-        setData(newdata); 
+        setData(newdata);
 
         navigate('/child');
 
     }
 
-  return (
-    <div>
-        {/* MainComponent */}
-        {/* <div> Passing data from main component</div> */}
-        <ChildComponent data="hamid" />
-
-            
-        
-
+    return (
         <div>
-            <button className='bg-red-400 ' onClick={ParentToChild}>
-             Main Component
-            </button>
-        </div>
-        
 
-    </div>
-  )
+            <p>the below data is come child props component</p>
+            <ChildComponent name="hamid" fullname="syed hamid ali" age="36" />
+
+
+
+
+
+
+
+            <div>
+                <button className='bg-red-400 ' onClick={ParentToChild}>
+                    Main Component
+                </button>
+            </div>
+
+
+        </div>
+    )
 }

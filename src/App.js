@@ -13,14 +13,15 @@ function App() {
       <MainComponent/>
       {/* <div className='mt-4'> 
       <Location/>
-      </div> */} 
+      </div> */}
       <Routes>
-        <Route path="/" element={<WeatherComponent/>}></Route>
-        <Route path="parent" element={<MainComponent/>}> </Route>
-        <Route path="child" element={<ChildComponent/>}></Route>
+        <Route path="/" element={<WeatherComponent />}></Route>
+        <Route path="parent" element={<MainComponent />}> </Route>
+        <Route path="child" element={<ChildComponent />}></Route>
+
       </Routes>
-  
-  
+
+
     </div>
   );
 }
