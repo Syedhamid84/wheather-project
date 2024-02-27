@@ -1,7 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { MainComponent } from './Maincomponent/MainComponent';
 import WeatherComponent from './Weather/Weather.component';
-import { ChildComponent } from './Childcomponent/ChildComponent';
 
 function App() {
   return (
@@ -9,8 +7,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<WeatherComponent />}></Route>
-        <Route path="parent" element={<MainComponent />}> </Route>
-        <Route path="child" element={<ChildComponent />}></Route>
+
 
       </Routes>
 
